@@ -9,6 +9,7 @@
 // @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
+// @run-at       document-start
 // ==/UserScript==
 
 // see: https://codepen.io/abernier/pen/GRoKqdp?editors=0100
