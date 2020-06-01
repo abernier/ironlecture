@@ -2,7 +2,7 @@
 // @name         ironlecture
 // @namespace    name.abernier
 // @version      0.1
-// @description  Lecture annotations
+// @description  Reveal Ironhack .lecture annotations
 // @author       abernier
 // @match        https://preview.my.ironhack.com/*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
