@@ -2,52 +2,17 @@
 // @name         ironlecture
 // @namespace    name.abernier
 // @version      0.1
-// @description  Reveal Ironhack .lecture annotations
+// @description  Lecture annotations
 // @author       abernier
 // @match        https://preview.my.ironhack.com/*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
+// @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css
+// @grant        GM_getResourceText
+// @grant        GM_addStyle
 // ==/UserScript==
 
-const lmscss = `
-/*
-LMS fixes
-*/
-
-/* not submitted yet */
-.ih-course-container ol,
-.ih-course-container ul {padding-left:40px;}
-.ih-course-container p {margin-bottom:1em;}
-.ih-course-container ul li {margin-bottom:initial;}
-.ih-course-container .alert {margin-top:1em;margin-bottom:1em;}
-
-/* wide youtube player
-see: https://docs.google.com/document/d/1A85KWmZ2Atr4VEZaO2lgKISWieFOquCbqk0pDdkdmgs/edit#heading=h.tujhntb3h7d
-*/
-.youtube {padding-bottom:calc(100% * 9/16); position:relative;}
-.youtube >iframe {position:absolute;left:0;top:0; width:100%;height:100%;}
-
-/* Removing last-child margin-bottom inside .alert blocks
-see: https://docs.google.com/document/d/1A85KWmZ2Atr4VEZaO2lgKISWieFOquCbqk0pDdkdmgs/edit#heading=h.i022ofgzw5mi
-*/
-.alert >:last-child,
-.alert >:last-child,
-.alert >:last-child {margin-bottom: 0;}
-
-/* simple 'foo' codes are not styled */
-:not(pre) >code {background:#f4f4f4; padding:.2em; border-radius:3px;}
-
-/* quotes are not visible enough
-see: https://docs.google.com/document/d/1A85KWmZ2Atr4VEZaO2lgKISWieFOquCbqk0pDdkdmgs/edit#heading=h.1ymwp9xhfwp0
-*/
-blockquote {
-  margin-left:0!important; /* remove !important */
-  padding:20px;padding-right:0; /* 20px from 'table' margin value */
-
-  border-left:3px solid rgb(226, 226, 226); /* same as 'pre code' except for color which is from 'table th' background-color */
-  margin-bottom:12px; /*  */
-}
-blockquote >:last-child {margin-bottom:0;}
-`;
+// see: https://codepen.io/abernier/pen/GRoKqdp?editors=0100
+const lmscss = GM_getResourceText("lmscss")
 
 const scss = `
 .lecture {display:block!important;}
@@ -88,7 +53,7 @@ Sass.compile(scss, function (result) {
     //console.log('css', css);
 
     // https://stackoverflow.com/a/28662118/133327
-    document.body.insertAdjacentHTML("beforeend", `<style>${css}${lmscss}</style>`)
+    document.body.insertAdjacentHTML("beforeend", `<style>${css}${lmscss || ''}</style>`)
 });
 
 //alert("coucou")
