@@ -13,7 +13,7 @@ Go to [ironlecture.user.js](https://github.com/abernier/ironlecture/raw/master/i
 *example with `js-intro.md`*
 
 In your md lesson, add the following `<style>` tag to hide `.lecture` blocks by default:
-```html
+```markdown
 …
 
 ## Learning Goals
@@ -28,7 +28,7 @@ After this lesson you will be able to:
 
 then, simply add you annotations blocks:
 
-```
+```markdown
 ## What is JavaScript?
 
 :::info lecture
