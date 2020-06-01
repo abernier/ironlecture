@@ -1,4 +1,4 @@
-[![](https://img.shields.io/badge/tampermonkey-ironlecture.user.js-0a6b00)](https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js)
+[![](https://img.shields.io/badge/Tampermonkey-ironlecture.user.js-0a6b00)](https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js)
 
 `ironlecture.user.js` is a userscript that reveals MD `:::* lecture` blocks on https://my.ironhack.com plateform.
 
