@@ -10,7 +10,7 @@ Go to [ironlecture.user.js](https://github.com/abernier/ironlecture/raw/master/i
 
 # Usage
 
-*example with `js-intro.md`*
+*example with `js-intro.md`* (demo [here](https://preview.my.ironhack.com/lms/courses/course-v1:IRONHACK+WDPT+202006_PAR/units/ironhack-course-chapter_1-sequential-vertical))
 
 In your md lesson, add the following `<style>` tag to hide `.lecture` blocks by default:
 ```markdown
@@ -41,7 +41,7 @@ Créé en 1995 par [Brendan Eich](https://en.wikipedia.org/wiki/Brendan_Eich) :
 According to the official **MDN** (Mozilla Developer Network) documentation, **JavaScript can be defined as a *lightweight* *interpreted* programming language with *first-class functions***.
 ```
 
-The above `:::info lecture` block will only display if `ironlecture` is installed.
+🙌 The above `:::info lecture` block will only display if `ironlecture` is installed.
 
 # Nota bene
 
