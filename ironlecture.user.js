@@ -6,40 +6,20 @@
 // @author       abernier
 // @include      /^https?:\/\/(preview.)?my.ironhack.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR).*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
-// @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css
+// @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css?v2
+// @resource     lecturecss https://codepen.io/abernier/pen/bGEbqYM.css?v3
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
 // ==/UserScript==
 
 console.log('👨🏻‍🏫 ironlecture')
 
-// see: https://codepen.io/abernier/pen/GRoKqdp?editors=0100
-const lmscss = GM_getResourceText("lmscss")
+const lmscss = GM_getResourceText("lmscss") // see: https://codepen.io/abernier/pen/GRoKqdp?editors=0100
+const lecturecss = GM_getResourceText("lecturecss") // see: https://codepen.io/abernier/pen/bGEbqYM?editors=0100
+// console.log('lmscss', lmscss)
+// console.log('lecturecss', lecturecss)
 
 const scss = `
-.lecture {display:block!important;}
-
-.content-wrapper {overflow:initial;}
-
-.alert.lecture {
-  //box-shadow:0 0 0 .5rem rgba(64, 96, 85, 0.4);
-  //position:relative;
-  //display:none;
-  border:5px solid;
-}
-
-.alert.lecture:before {
-  content:"";
-  display:block;margin-bottom:.5em;
-  /*position:absolute; right:0; top:0;
-  margin:3px;margin-right:7px;*/
-  width:1em; height:1em;
-  //background:url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/male-teacher_1f468-200d-1f3eb.png");
-  background:url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/male-teacher-type-1-2_1f468-1f3fb-200d-1f3eb.png");
-  background-size:contain;
-  font-size: 3rem;
-}
-
 // only way of "undoing" 'img {height:auto;}' set by LMS
 @for $i from 0 through 2000 {
   img[height="#{$i}"]{height:#{$i}px}
@@ -55,5 +35,5 @@ Sass.compile(scss, function (result) {
     //console.log('css', css);
 
     // https://stackoverflow.com/a/28662118/133327
-    document.body.insertAdjacentHTML("beforeend", `<style>${css}${lmscss || ''}</style>`)
+    document.body.insertAdjacentHTML("beforeend", `<style>${lmscss || ''}${lecturecss || ''}${css}</style>`)
 });
