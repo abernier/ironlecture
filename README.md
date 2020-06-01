@@ -5,7 +5,7 @@ Ironlecture is a `user.js` script that reveals `:::* lecture` blocks on https://
 Pre-requisites:
   - install the [Tampermonkey](https://www.tampermonkey.net) extension, for example for [Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
 
-Go to https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js and click the `Install` button:
+Go to [https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js](ironlecture.user.js) and click the `Install` button:
 ![](https://assets.codepen.io/67030/Screenshot+2020-06-01+at+11.56.13.png)
 
 That's it!
