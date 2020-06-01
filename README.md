@@ -1,5 +1,9 @@
 Ironlecture is a `user.js` script that reveals `:::* lecture` blocks on https://my.ironhack.com
 
+|Before|After|
+|------|-----|
+|![](https://assets.codepen.io/67030/Screenshot+2020-06-01+at+12.16.13.png)|![](https://assets.codepen.io/67030/Screenshot_2020-06-01_at_12_15_57.png)|
+
 # INSTALL
 
 Pre-requisites:
