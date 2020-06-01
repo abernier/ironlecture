@@ -12,7 +12,7 @@ Pre-requisites:
 Go to [ironlecture.user.js](https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js) and click the `Install` button:
 ![](https://assets.codepen.io/67030/Screenshot+2020-06-01+at+11.56.13.png)
 
-That's it! You should now wee annotation blocks, especially on wdpt202006par lessons: for [students](https://my.ironhack.com/lms/courses/course-v1:IRONHACK+WDPT+202006_PAR) / [teachers](https://preview.my.ironhack.com/lms/courses/course-v1:IRONHACK+WDPT+202006_PAR)
+That's it! You should now wee annotation blocks, especially on `wdpt202006par` lessons: for [students](https://my.ironhack.com/lms/courses/course-v1:IRONHACK+WDPT+202006_PAR) / [teachers](https://preview.my.ironhack.com/lms/courses/course-v1:IRONHACK+WDPT+202006_PAR)
 
 # Usage
 
