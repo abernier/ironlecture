@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         ironlecture
 // @namespace    name.abernier
-// @version      0.1.1
+// @version      0.1.2
 // @description  Lecture annotations
 // @author       abernier
 // @include      /^https?:\/\/(preview.)?my.ironhack.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR).*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
-// @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css?v2
-// @resource     lecturecss https://codepen.io/abernier/pen/bGEbqYM.css?v3
+// @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css?v3
+// @resource     lecturecss https://codepen.io/abernier/pen/bGEbqYM.css?v4
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -20,10 +20,7 @@ const lecturecss = GM_getResourceText("lecturecss") // see: https://codepen.io/a
 // console.log('lecturecss', lecturecss)
 
 const scss = `
-// only way of "undoing" 'img {height:auto;}' set by LMS
-@for $i from 0 through 2000 {
-  img[height="#{$i}"]{height:#{$i}px}
-}
+// nothing yet
 `;
 
 Sass.compile(scss, function (result) {
