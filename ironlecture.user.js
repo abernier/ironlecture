@@ -4,14 +4,14 @@
 // @version      0.1
 // @description  Lecture annotations
 // @author       abernier
-// @match        https://preview.my.ironhack.com/*
-// @match        https://my.ironhack.com/*
+// @include      /^https?:\/\/(preview.)?my.ironhack.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR).*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
 // @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
-// @run-at       document-start
 // ==/UserScript==
+
+console.log('👨🏻‍🏫 ironlecture')
 
 // see: https://codepen.io/abernier/pen/GRoKqdp?editors=0100
 const lmscss = GM_getResourceText("lmscss")
@@ -57,5 +57,3 @@ Sass.compile(scss, function (result) {
     // https://stackoverflow.com/a/28662118/133327
     document.body.insertAdjacentHTML("beforeend", `<style>${css}${lmscss || ''}</style>`)
 });
-
-//alert("coucou")
