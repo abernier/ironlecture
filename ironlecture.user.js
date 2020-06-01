@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ironlecture
 // @namespace    name.abernier
-// @version      0.1
+// @version      0.1.1
 // @description  Lecture annotations
 // @author       abernier
 // @include      /^https?:\/\/(preview.)?my.ironhack.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR).*
