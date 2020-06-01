@@ -53,7 +53,7 @@ According to the official **MDN** (Mozilla Developer Network) documentation, **J
 
 # Nota bene
 
-NB: Currently, this is only enabled for WDPT201909PAR and WDPT202006PAR, ie: my cohorts. But you can also enable it for you, just by updating this regex on [this line](https://github.com/abernier/ironlecture/blob/dcd1f1c5747fee483527046dc258e27da59904c2/ironlecture.user.js#L7):
+Currently, this is only enabled for `wdpt201909par` and `wdpt202006par`, ie: my cohorts. But you can also enable it for you, just by updating this regex on [this line](https://github.com/abernier/ironlecture/blob/dcd1f1c5747fee483527046dc258e27da59904c2/ironlecture.user.js#L7):
 
 ```js
 // @include      /^https?:\/\/(preview.)?my.ironhack.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR).*
