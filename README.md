@@ -1,4 +1,4 @@
-`ironlecture.user.js` script that reveals `:::* lecture` blocks on https://my.ironhack.com
+`ironlecture.user.js` is a userscript that reveals `:::* lecture` blocks on https://my.ironhack.com
 
 |Before|After|
 |------|-----|
