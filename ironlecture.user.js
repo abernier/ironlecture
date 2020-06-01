@@ -5,6 +5,7 @@
 // @description  Lecture annotations
 // @author       abernier
 // @match        https://preview.my.ironhack.com/*
+// @match        https://my.ironhack.com/*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
 // @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css
 // @grant        GM_getResourceText
