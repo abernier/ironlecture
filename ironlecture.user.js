@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         ironlecture
-// @version      0.1.7
+// @version      0.1.8
 // @author       abernier
 // @namespace    name.abernier
 // @description  Ironhack lecture annotations
 // @homepage     https://github.com/abernier/ironlecture
 // @updateURL    https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js
+// @downloadURL  https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js
 // @supportURL   https://github.com/abernier/ironlecture/issues
 // @include      /^https?:\/\/(preview.)?my.ironhack.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR).*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
