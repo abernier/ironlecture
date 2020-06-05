@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ironlecture
-// @version      0.1.6
+// @version      0.1.7
 // @author       abernier
 // @namespace    name.abernier
 // @description  Ironhack lecture annotations
@@ -30,6 +30,7 @@ const scss = `
 //
 // Swipe left/right => next/prev lesson
 //
+
 const mc = new Hammer(document.body, {
     touchAction: 'initial',
     cssProps: {
