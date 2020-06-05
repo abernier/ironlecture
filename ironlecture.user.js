@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ironlecture
-// @version      0.1.8
-// @author       abernier
+// @version      0.1.9
+// @author       abernierr
 // @namespace    name.abernier
 // @description  Ironhack lecture annotations
 // @homepage     https://github.com/abernier/ironlecture
