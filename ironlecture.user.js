@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ironlecture
 // @namespace    name.abernier
-// @version      0.1.3
+// @version      0.1.4
 // @homepage     https://github.com/abernier/ironlecture
 // @description  Lecture annotations
 // @author       abernier
@@ -26,13 +26,13 @@ const scss = `
 `;
 
 //
-// Swipe left/right => prev/next lesson
+// Swipe left/right => next/prev lesson
 //
 const mc = new Hammer(document.body)
 mc.on("swipeleft", function(ev) {
-    document.querySelector('a.previous').click();
-}).on("swiperight", function(ev) {
     document.querySelector('a.next').click();
+}).on("swiperight", function(ev) {
+    document.querySelector('a.previous').click();
 });
 
 
