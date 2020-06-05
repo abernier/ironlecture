@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ironlecture
-// @version      0.1.10
+// @version      0.1.11
 // @author       abernier
 // @namespace    name.abernier
 // @description  Ironhack lecture annotations
@@ -19,17 +19,37 @@
 
 console.log('👨🏻‍🏫 ironlecture')
 
+//
+// Inject additional styles
+//   1. `lmscss`: LMS css fixes (see https://codepen.io/abernier/pen/GRoKqdp)
+//   2. `lecturecss`: lecture specific styles (see https://codepen.io/abernier/pen/bGEbqYM)
+//   3. `css`: other styles (compiled from `scss` on the fly)
+//
+
 const lmscss = GM_getResourceText("lmscss") // see: https://codepen.io/abernier/pen/GRoKqdp?editors=0100
 const lecturecss = GM_getResourceText("lecturecss") // see: https://codepen.io/abernier/pen/bGEbqYM?editors=0100
 // console.log('lmscss', lmscss)
 // console.log('lecturecss', lecturecss)
+let css;
 
 const scss = `
 // nothing yet
 `;
 
+Sass.compile(scss, function (result) {
+    if (result.status !== 0) { // see https://github.com/medialize/sass.js/blob/master/docs/api.md#the-response-object
+        throw new Error('Failed to compile');
+    }
+
+    css = result.text;
+    //console.log('css', css);
+
+    // https://stackoverflow.com/a/28662118/133327
+    document.body.insertAdjacentHTML("beforeend", `<style>${lmscss || ''}${lecturecss || ''}${css || ''}</style>`)
+});
+
 //
-// Swipe left/right => next/prev lesson
+// Gestures: swipe left/right => next/prev lesson
 //
 
 const mc = new Hammer(document.body, {
@@ -42,17 +62,4 @@ mc.on("swipeleft", function(ev) {
     document.querySelector('a.next').click();
 }).on("swiperight", function(ev) {
     document.querySelector('a.previous').click();
-});
-
-
-Sass.compile(scss, function (result) {
-    if (result.status !== 0) { // see https://github.com/medialize/sass.js/blob/master/docs/api.md#the-response-object
-        throw new Error('Failed to compile');
-    }
-
-    const css = result.text;
-    //console.log('css', css);
-
-    // https://stackoverflow.com/a/28662118/133327
-    document.body.insertAdjacentHTML("beforeend", `<style>${lmscss || ''}${lecturecss || ''}${css}</style>`)
 });
