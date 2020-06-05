@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         ironlecture
 // @namespace    name.abernier
-// @version      0.1.2
+// @version      0.1.3
+// @homepage     https://github.com/abernier/ironlecture
 // @description  Lecture annotations
 // @author       abernier
 // @include      /^https?:\/\/(preview.)?my.ironhack.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR).*
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
-// @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css?v3
-// @resource     lecturecss https://codepen.io/abernier/pen/bGEbqYM.css?v4
+// @require      https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js
+// @resource     lmscss https://codepen.io/abernier/pen/GRoKqdp.css?v12
+// @resource     lecturecss https://codepen.io/abernier/pen/bGEbqYM.css?v13
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
 // ==/UserScript==
@@ -22,6 +24,17 @@ const lecturecss = GM_getResourceText("lecturecss") // see: https://codepen.io/a
 const scss = `
 // nothing yet
 `;
+
+//
+// Swipe left/right => prev/next lesson
+//
+const mc = new Hammer(document.body)
+mc.on("swipeleft", function(ev) {
+    document.querySelector('a.previous').click();
+}).on("swiperight", function(ev) {
+    document.querySelector('a.next').click();
+});
+
 
 Sass.compile(scss, function (result) {
     if (result.status !== 0) { // see https://github.com/medialize/sass.js/blob/master/docs/api.md#the-response-object
