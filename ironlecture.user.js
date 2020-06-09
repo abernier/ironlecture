@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ironlecture
-// @version      0.1.12
+// @version      0.1.13
 // @author       abernier
 // @namespace    name.abernier
 // @description  Ironhack lecture annotations
@@ -51,15 +51,22 @@ Sass.compile(scss, function (result) {
 //
 // Gestures: swipe left/right => next/prev lesson
 //
+// see: https://codepen.io/abernier/pen/NWxxxWZ?editors=0111
+//
+
+// https://stackoverflow.com/a/37896547/133327
+delete Hammer.defaults.cssProps.userSelect;
 
 const mc = new Hammer(document.body, {
-    touchAction: 'initial',
-    cssProps: {
-        userSelect: true
-    }
+  // https://hammerjs.github.io/api/#hammer-manager
+  recognizers: [
+    [Hammer.Swipe, {velocity: 1}]
+  ]
 });
-mc.on("swipeleft", function(ev) {
+
+mc.on("swipeleft", function (ev) {
     document.querySelector('a.next').click();
-}).on("swiperight", function(ev) {
+})
+mc.on("swiperight", function (ev) {
     document.querySelector('a.previous').click();
 });
