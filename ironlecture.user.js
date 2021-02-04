@@ -8,7 +8,7 @@
 // @updateURL    https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js
 // @downloadURL  https://github.com/abernier/ironlecture/raw/master/ironlecture.user.js
 // @supportURL   https://github.com/abernier/ironlecture/issues
-// @include      /^https?:\/\/(preview.)?my\.ironhack\.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR).*/
+// @include      /^https?:\/\/(preview.)?my\.ironhack\.com\/.*(WDPT.*201909_PAR|WDPT.*202006_PAR|WDPT.*202102_PAR).*/
 // @require      https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js
 // @grant        GM_getResourceText
