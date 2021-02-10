@@ -4,7 +4,7 @@
 
 |Before|After|
 |------|-----|
-| ![](https://assets.codepen.io/67030/Screenshot+2020-06-01+at+12.20.27.png) | ![](https://assets.codepen.io/67030/Screenshot_2020-06-01_at_12_15_57.png) |
+|![](https://res.cloudinary.com/dtqr57xyj/image/upload/v1612990862/Screenshot_2020-06-01_at_12.webp)|![](https://res.cloudinary.com/dtqr57xyj/image/upload/v1612990863/Screenshot_2020-06-01_at_12_15_57.png)|
 
 # INSTALL
 
