@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ironlecture
-// @version      0.1.17
+// @version      0.1.18
 // @author       abernier
 // @namespace    name.abernier
 // @description  Ironhack lecture annotations
@@ -28,10 +28,12 @@ console.log('👨🏻‍🏫 ironlecture')
 // const lecturecss = GM_getResourceText("lecturecss") // see: https://codepen.io/abernier/pen/bGEbqYM?editors=0100
 
 const lmsscss = `
-// Trailing dots for headings
-h1, h2, h3, h4, h5, h6 {
-  overflow:hidden; white-space:nowrap;
-  &:after {content:"......................................................................................................................................................................................";}
+.ih-course-container {
+  // Trailing dots for headings
+  h1, h2, h3, h4, h5, h6 {
+    overflow:hidden; white-space:nowrap;
+    &:after {content:"......................................................................................................................................................................................";}
+  }
 }
 
 /*
