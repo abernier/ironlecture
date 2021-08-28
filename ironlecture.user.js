@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ironlecture
-// @version      0.1.19
+// @version      0.1.20
 // @author       abernier
 // @namespace    name.abernier
 // @description  Ironhack lecture annotations
